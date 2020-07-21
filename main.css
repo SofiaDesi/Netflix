@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+body {
+    background-color: black;
+}
+section {
+    background-image: url("./img/background.png");
+    background-size: cover;
+}
+@keyframes neon {
+    from {
+        filter: drop-shadow(0 0 0 var(--cor-neon));
+    }
+    to {
+        filter: drop-shadow(0 0 30px var(--cor-neon));
+    }
+}
+nav .logo {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    opacity: 1;
+    --cor-neon: rgba(248, 248, 114, 0.295);
+    animation: neon 3s alternate infinite ease-in-out;
+}
+.box-shadow {
+    -webkit-box-shadow: inset 3px 200px 57px -173px rgba(0,0,0,0.71);
+    -moz-box-shadow: inset 3px 200px 57px -173px rgba(0,0,0,0.71);
+    box-shadow: inset 3px 200px 57px -173px rgba(0,0,0,0.71);
+}
+.title-one {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 32px;
+    text-align: left;
+}
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+    max-width: 50%;
+    padding-top: 65px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 90px;
+    margin-bottom: 20px;
+    margin: 15px;
+    background-color: rgba(0, 0, 0, 0.726);
+    border-radius: 10px;
+}
+.portion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-label {
+    color: #b3b3b3;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.red {
+    background-color: #ce0711;
+    color: white;
+    font-size: 17px;
+    border: none;
+    height: 50px;
+    width: 100%;
+}
+.connection, .subscribe, .security {
+    text-align: left;
+}
+@media only screen and (max-width: 990px) {
+  .box {
+      max-width: 100%;
+  }
+}
