@@ -9,12 +9,48 @@
     <link rel="stylesheet" href="./main.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <title>Netflix</title>
-
+    <script src="sweetalert.js"></script>
   </head>
 
   <body>
 
+  <script type="text/javascript">
+      Swal.mixin({
+      input: 'text',
+      confirmButtonText: 'Próximo',
+      showCancelButton: true,
+      cancelButtonText: 'Já sou cadastrado',
+      progressSteps: ['1', '2', '3']
+    }).queue([
+      {
+        title: 'Cadastre-se',
+        text: 'Digite seu email'
+      },
+      {
+        title: 'Cadastre-se',
+        text: 'Digite seu nome de usuário'
+      },
+      {
+        title: 'Cadastre-se',
+        text: 'Digite sua senha'
+      },
+    ]).then((result) => {
+      if (result.value) {
+        const answers = JSON.stringify(result.value)
+        Swal.fire({
+          title: 'Quase lá...',
+          html: `
+            Seus dados:
+            <pre><code>${answers}</code></pre>
+          `,
+          confirmButtonText: 'Cadastrar!'
+        })
+      }
+    })
+  </script>
+
     <section>
+
     <nav class="nav box-shadow justify-content-center">
         <img class="nav-link logo" href="#" src="./img/netflix-logo.png" width="210"></img>
     </nav>
