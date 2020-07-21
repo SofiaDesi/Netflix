@@ -2,6 +2,7 @@
 
 body {
     background-color: black;
+    max-width: 100%;
 }
 section {
     background-image: url("./img/background.png");
@@ -19,7 +20,7 @@ nav .logo {
     margin-top: 20px;
     margin-bottom: 15px;
     opacity: 1;
-    --cor-neon: rgba(248, 248, 114, 0.295);
+    --cor-neon: rgba(255, 255, 255, 0.315);
     animation: neon 3s alternate infinite ease-in-out;
 }
 .box-shadow {
@@ -76,3 +77,15 @@ nav .logo {
       max-width: 100%;
   }
 }
+@media only screen and (max-width: 650px) {
+    section {
+     background-image: url(./img/background-responsive.jpg);
+     background-size: cover;
+    }
+ }
+ @media only screen and (max-width: 135px) {
+    section {
+     background-image: none;
+    }
+ }
+
